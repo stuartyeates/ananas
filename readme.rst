@@ -24,7 +24,7 @@ But it's easy to write one with customized behavior:
     class MyBot(ananas.PineappleBot):
         def start(self):
             with open('trivia.txt', 'r') as trivia_file:
-               self.trivia = trivia_file.lines()
+               self.trivia = trivia_file.readlines()
 
         @hourly(minute=17)
         def post_trivia(self):
